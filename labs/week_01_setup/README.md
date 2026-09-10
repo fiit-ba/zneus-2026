@@ -131,7 +131,7 @@ Now run [`01_environment_check.ipynb`](01_environment_check.ipynb). It checks ev
 ## Google Colab
 
 [Google Colab](https://colab.research.google.com) runs notebooks on Google's machines with a free NVIDIA T4 GPU. Use
-it when your laptop has no GPU (weeks 7 and 8, and the project) or when your own setup misbehaves. You only need a
+it when your laptop has no GPU (week 8 and the project) or when your own setup misbehaves. You only need a
 Google account.
 
 1. **Open a notebook.** Click the *Open in Colab* badge at the top of the notebook. It opens the copy in **our**
@@ -159,24 +159,26 @@ Good to know:
 
 ## Kaggle
 
-[Kaggle](https://www.kaggle.com) hosts the leaderboards of weeks 1 and 4 to 8. You upload a `submission.csv` with
+[Kaggle](https://www.kaggle.com) hosts the leaderboards of weeks 1 and 5 to 8. You upload a `submission.csv` with
 predictions and the leaderboard scores it.
 
-1. **Account.** Sign up at [kaggle.com](https://www.kaggle.com/account/login). Then **verify your phone number** in
-   *Settings*. Without it you cannot submit.
-2. **Name yourself.** Set your **display name** to your **AIS login** (profile → *Edit profile*). If a competition
-   has a *Team* tab, set the **team name** to your AIS login too. Unnamed entries cannot be graded.
-3. **Join the competition** through the link given at the lab (**Join Competition**, accept the rules).
-4. **Download the data** from the competition's *Data* tab into `labs/week_XX_*/data/kaggle/`. Without it the
-   notebook falls back to a public copy of the dataset and your submission does not score.
-5. **Submit.** Click **Submit Prediction**, upload the `submission.csv` the notebook wrote, add a short description.
-   Your score appears under *My Submissions* and on the *Leaderboard*.
+For week 1, follow the [warm-up upload guide](README.md#kaggle-your-first-submission). It contains the invitation
+link, exact file to upload, deadline, and how to check completion. No model training is required.
+
+1. **Account.** Sign up at [kaggle.com](https://www.kaggle.com/account/login) and complete any verification Kaggle requests.
+2. **Team name.** Set your competition **team name** to your **AIS login**, so the instructor can identify your submission.
+3. **Join.** Use the [week 1 invitation link](https://www.kaggle.com/t/5e8b5441c9144adbaa973dceac384939), read the rules, and join. Later weeks will have their own links.
+4. **Data.** For week 1, `sample_submission.csv` is already valid for an upload test. The notebook can also generate
+   a valid CSV without downloading data. For weeks 5 to 8, download the competition files into the week's
+   `data/kaggle/` directory; the notebooks' public-data fallbacks do not produce matching competition IDs.
+5. **Submit.** Click **Submit Prediction** and upload `submission.csv`. Wait for processing, then check
+   **Submissions** for a numeric score and no error. The file staying on your computer is not a Kaggle submission.
 
 Prefer the terminal? Log in once, then submit:
 
 ```bash
 uv run kaggle auth login           # opens the browser, click Allow
-uv run kaggle competitions submit -c <competition-slug> -f submission.csv -m "week 4 mlp, 3 layers"
+uv run kaggle competitions submit -c <competition-slug> -f submission.csv -m "week 5 mlp, 3 layers"
 ```
 
 The slug is the last part of the competition URL. Submissions per day are limited, so do not upload every epoch. The
@@ -214,7 +216,7 @@ git merge upstream/main
 uv sync                            # GPU build: uv sync --no-group cpu --group cu130
 ```
 
-**After each lab**, commit the week's folder and push it to your fork:
+**To save your progress**, commit the week's folder and push it to your fork:
 
 ```bash
 git add labs/week_02_mlp_forward
@@ -222,8 +224,9 @@ git commit -m "week 2: perceptron and MLP forward pass"
 git push
 ```
 
-Your hand-in link is the commit (`https://github.com/<your-github-username>/zneus-2026/commit/<sha>`) or the week's
-folder in your fork. Notebook outputs are welcome. Never commit `data/`, `wandb/`, `.venv/`, `kaggle.json` or
+Weeks 2–4 are practice for a test: no notebook or link submission is required. For other weeks, follow the lab's
+hand-in instructions. A commit link looks like `https://github.com/<your-github-username>/zneus-2026/commit/<sha>`.
+Notebook outputs are welcome. Never commit `data/`, `wandb/`, `.venv/`, `kaggle.json` or
 `submission.csv`; they are git-ignored already.
 
 **Merge conflict?** `git status` lists the files. Keep your version with `git checkout --ours <path>`, or take ours

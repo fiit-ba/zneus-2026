@@ -25,7 +25,7 @@ iterate on is a feature here: the project is about the model, not the data.
 
 | Dataset | Images | Classes | Size on disk | Licence | Link | Notes |
 |---|---|---|---|---|---|---|
-| Oxford-IIIT Pets | 7 349 (3 680 trainval / 3 669 test) | 37 breeds | about 800 MB | CC BY-SA 4.0 | https://www.robots.ox.ac.uk/~vgg/data/pets/ | you fine-tuned a ResNet on it in week 8; the week 8 Kaggle test split has no public labels, so carve val (500 images) and test (1 000) from the 3 680 trainval images with a fixed seed, or use `torchvision.datasets.OxfordIIITPet(split="test")`, and never score on the Kaggle test. You may reuse your week 8 checkpoint if it was trained on images that are not in your new val/test |
+| Oxford-IIIT Pets | 7 349 (3 680 trainval / 3 669 test) | 37 breeds | about 800 MB | CC BY-SA 4.0 | https://www.robots.ox.ac.uk/~vgg/data/pets/ | fine-tune your ResNet-50 baseline on the trainval images, reserving 500 for validation with a fixed seed; use `torchvision.datasets.OxfordIIITPet(split="test")` for the untouched test split |
 | Imagenette | 9 469 train / 3 925 val | 10 easy ImageNet classes | 99 MB (160 px) / 341 MB (320 px) / 1.5 GB (full) | ImageNet terms, see page | https://github.com/fastai/imagenette | fastest to iterate on |
 | CIFAR-100 | 50 000 train / 10 000 test, 32×32 | 100 | 160 MB | see page | https://www.cs.toronto.edu/~kriz/cifar.html | tiny images: upsample to at least 128 px for an ImageNet-pretrained ResNet-50 or accept lower accuracy; `torchvision.datasets.CIFAR100` |
 | Food-101 | 101 000 (750 train + 250 test per class) | 101 | about 5 GB | see page | https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/ | take 10–20 classes; `torchvision.datasets.Food101` |
