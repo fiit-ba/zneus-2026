@@ -73,10 +73,10 @@ every week; [README.md](labs/week_01_setup/README.md) shows how.
 |:---:|---|---|
 | 1 | [Environment setup](labs/week_01_setup/) | Available: `01_environment_check.ipynb`, `02_torch_basics.ipynb` (optional) |
 | 2 | [MLP forward pass](labs/week_02_mlp_forward/) | Available: `task_1_perceptron_and_activations.ipynb` |
-| 3 | Backpropagation | Released in week 3 |
-| 4 | Optimizers | Released in week 4 |
-| 5 | California housing | Released in week 5 |
-| 6 | MNIST | Released in week 6 |
+| 3 | [Backpropagation](labs/week_03_backprop/) | Available: `task_1_backprop.ipynb` |
+| 4 | [Optimizers](labs/week_04_optimizers/) | Available: `task_1_optimizers.ipynb` |
+| 5 | [California housing](labs/week_05/) | Available: `task_4_california_housing_mlp.ipynb` |
+| 6 | [MNIST classification](labs/week_06/) | Available: `task_5_mnist_mlp.ipynb` |
 | 7 | Overfitting | Released in week 7 |
 | 8 | CIFAR-10 CNN | Released in week 8 |
 | Project | Topics and requirements | Released after the labs |
