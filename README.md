@@ -77,8 +77,8 @@ every week; [README.md](labs/week_01_setup/README.md) shows how.
 | 4 | [Optimizers](labs/week_04_optimizers/) | Available: `task_1_optimizers.ipynb` |
 | 5 | [California housing](labs/week_05/) | Available: `task_4_california_housing_mlp.ipynb` |
 | 6 | [MNIST classification](labs/week_06/) | Available: `task_5_mnist_mlp.ipynb` |
-| 7 | Overfitting | Released in week 7 |
-| 8 | CIFAR-10 CNN | Released in week 8 |
+| 7 | [Overfitting](labs/week_07/) | Available: `task_6_fashion_mnist_2k.ipynb` |
+| 8 | [CIFAR-10 CNN](labs/week_08/) | Available: `task_7_cifar10_cnn.ipynb` |
 | Project | Topics and requirements | Released after the labs |
 
 ## Working in Google Colab

@@ -2,7 +2,7 @@
 
 Classify 28 x 28 grayscale images of clothing into 10 categories, with a catch: you get only 2 000 training images (200 per class), while the test set has 10 000. A colleague trained an MLP on all 2 000 images: training accuracy 100 %, leaderboard score about 0.80. Beat it. Metric: accuracy.
 
-Notebook: [`task_6_fashion_mnist_2k.ipynb`](task_6_fashion_mnist_2k.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fiit-ba/zneus-2026/blob/main/labs/week_07_overfitting/task_6_fashion_mnist_2k.ipynb)
+Notebook: [`task_6_fashion_mnist_2k.ipynb`](task_6_fashion_mnist_2k.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fiit-ba/zneus-2026/blob/main/labs/week_07/task_6_fashion_mnist_2k.ipynb)
 
 For your private copy, follow the [Colab setup instructions](../week_01_setup/README.md#google-colab).
 
@@ -12,7 +12,7 @@ Open the [Week 7 invitation link](https://www.kaggle.com/t/0ebe475bb0374cc6bbccd
 
 ## Data
 
-After joining the [Kaggle competition](https://www.kaggle.com/t/0ebe475bb0374cc6bbccdf9d0ee0516e), download `train.npz` and `test.npz` from its *Data* tab into `labs/week_07_overfitting/data/kaggle/`.
+After joining the [Kaggle competition](https://www.kaggle.com/t/0ebe475bb0374cc6bbccdf9d0ee0516e), download `train.npz` and `test.npz` from its *Data* tab into `labs/week_07/data/kaggle/`.
 
 - `train.npz`: `x`, a `uint8` array `(2000, 28, 28)`, and `y`, the labels 0..9 (200 per class). **Train only on these 2 000 images.**
 - `test.npz`: `x`, 10 000 test images `(10000, 28, 28)`, no labels, shuffled; row `i` is the id `i` of your submission.
